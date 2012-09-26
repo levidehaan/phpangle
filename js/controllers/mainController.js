@@ -2,9 +2,7 @@ angular.element(document).ready(function() {
          angular.bootstrap(document);
 });
 
-var github = angular.module('github',['ngSanitize']);
-
-var app = angular.module('ltd', [], function($routeProvider, $locationProvider) {
+zing.module('zing', [], function($routeProvider, $locationProvider) {
   var self = this;
 
   $routeProvider.when("/projects", {
@@ -14,7 +12,7 @@ var app = angular.module('ltd', [], function($routeProvider, $locationProvider) 
   
 });
 
-app.run(function($rootScope) {
+zing.run(function($rootScope) {
     $rootScope.$on('$routeChangeStart', function(scope, newRoute) {
         $("#navigation>li.active").removeClass("active");
         if(newRoute === undefined){
